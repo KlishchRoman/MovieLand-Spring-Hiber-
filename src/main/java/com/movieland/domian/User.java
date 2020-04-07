@@ -7,13 +7,15 @@ import javax.persistence.*;
 public class User {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
     private int userId;
-    @Column(name = "user_name")
+
+    @Column(name = "user_name", nullable = false)
     private String userName;
-    @Column(name = "email")
+
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
-    @Column(name = "password")
+
+    @Column(name = "password", nullable = false)
     private String password;
 
     public int getUserId() {

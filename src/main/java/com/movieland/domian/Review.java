@@ -1,23 +1,26 @@
 package com.movieland.domian;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "reviews")
 public class Review {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "review_id")
     private int reviewId;
+    //TODO: @JoinColumn?
+    @ManyToOne(targetEntity = Movie.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "movie_id")
+    private Movie movie_id;
+    //TODO: cascade = CascadeType.***? @JoinColumn?
 
-    @Column(name = "movie_id")
-    private int movie_id;
+    @ManyToOne(targetEntity = User.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user_id;
 
-    private int user_id;
-    @Column(name = "reviewMovie")
+    @Column(name = "reviewMovie",nullable = false)
     private String reviewMovie;
 
     public int getReviewId() {

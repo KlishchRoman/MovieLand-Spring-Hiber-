@@ -10,31 +10,30 @@ public class Movie {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "movie_id")
     private int movieId;
-    @Column(name = "rusName")
+    @Column(name = "nameRussian", nullable = false)
     private String nameRussian;
-    @Column(name = "enName")
+    @Column(name = "nameNative")
     private String nameNative;
-    @Column(name = "yearOfIssue")
+    @Column(name = "yearOfRelease")
     private int yearOfRelease;
     @Column(name = "rating")
     private float rating;
     @Column(name = "price")
     private BigDecimal price;
+    @Column(name = "picturePath")
+    private String picturePath;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "movies_geners",
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "movies_genres",
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private List<Genre> genres;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "movies_countries",
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns = @JoinColumn(name = "country_id"))
-    private List<Country> countrys;
-
-    @OneToOne(mappedBy = "posters")
-    private Poster picturePath;
+    private List<Country> countries;
 
     public int getMovieId() {
         return movieId;
@@ -84,4 +83,27 @@ public class Movie {
         this.price = price;
     }
 
+    public String getPicturePath() {
+        return picturePath;
+    }
+
+    public void setPicturePath(String picturePath) {
+        this.picturePath = picturePath;
+    }
+
+    public List<Genre> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<Genre> genres) {
+        this.genres = genres;
+    }
+
+    public List<Country> getCountries() {
+        return countries;
+    }
+
+    public void setCountries(List<Country> countries) {
+        this.countries = countries;
+    }
 }
