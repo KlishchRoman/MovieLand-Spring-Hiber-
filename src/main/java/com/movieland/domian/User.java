@@ -1,6 +1,7 @@
 package com.movieland.domian;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -17,6 +18,11 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @ElementCollection(targetClass = Roles.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "roles", joinColumns = @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    private Set<Roles> roles;
 
     public int getUserId() {
         return userId;
