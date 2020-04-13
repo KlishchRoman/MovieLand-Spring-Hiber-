@@ -1,0 +1,67 @@
+INSERT INTO movies (movie_id, name_russian, name_native, year_of_release, description, rating, price, picture_path) VALUES (1, 'Список Шиндлера', 'Schindler''s List', '1993', 'Фильм рассказывает реальную историю загадочного Оскара Шиндлера, члена нацистской партии, преуспевающего фабриканта, спасшего во время Второй мировой войны почти 1200 евреев.', 8.7, 150.5, 'https://images-na.ssl-images-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1._SX140_CR0,0,140,209_.jpg');
+INSERT INTO movies (movie_id, name_russian, name_native, year_of_release, description, rating, price, picture_path) VALUES (2, 'Пролетая над гнездом кукушки', 'One Flew Over the Cuckoo''s Nest', '1975', 'Сымитировав помешательство в надежде избежать тюремного заключения, Рэндл Патрик МакМерфи попадает в психиатрическую клинику, где почти безраздельным хозяином является жестокосердная сестра Милдред Рэтчед. МакМерфи поражается тому, что прочие пациенты смирились с существующим положением вещей, а некоторые — даже сознательно пришли в лечебницу, прячась от пугающего внешнего мира. И решается на бунт. В одиночку.', 8.7, 180, 'https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1._SY209_CR0,0,140,209_.jpg');
+INSERT INTO movies (movie_id, name_russian, name_native, year_of_release, description, rating, price, picture_path) VALUES (3, 'Форрест Гамп', 'Forrest Gump', '1994', 'От лица главного героя Форреста Гампа, слабоумного безобидного человека с благородным и открытым сердцем, рассказывается история его необыкновенной жизни.Фантастическим образом превращается он в известного футболиста, героя войны, преуспевающего бизнесмена. Он становится миллиардером, но остается таким же бесхитростным, глупым и добрым. Форреста ждет постоянный успех во всем, а он любит девочку, с которой дружил в детстве, но взаимность приходит слишком поздно.', 8.6, 200.6, 'https://images-na.ssl-images-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1._SY209_CR2,0,140,209_.jpg');
+INSERT INTO movies (movie_id, name_russian, name_native, year_of_release, description, rating, price, picture_path) VALUES (4, 'Как приручить дракона', 'How to Train Your Dragon', '2010', 'Вы узнаете историю подростка Иккинга, которому не слишком близки традиции его героического племени, много лет ведущего войну с драконами. Мир Иккинга переворачивается с ног на голову, когда он неожиданно встречает дракона Беззубика, который поможет ему и другим викингам увидеть привычный мир с совершенно другой стороны…', 8.2, 182, 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1._SY209_CR0,0,140,209_.jpg');
+INSERT INTO movies (movie_id, name_russian, name_native, year_of_release, description, rating, price, picture_path) VALUES (5, 'Молчание ягнят', 'The Silence of the Lambs', '1990', 'Психопат похищает и убивает молодых женщин по всему Среднему Западу Америки. ФБР, уверенное в том, что все преступления совершены одним и тем же человеком, поручает агенту Клариссе Старлинг встретиться с заключенным-маньяком, который мог бы объяснить следствию психологические мотивы серийного убийцы и тем самым вывести на его след.', 8.3, 150.5, 'https://images-na.ssl-images-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1._SY209_CR1,0,140,209_.jpg');
+INSERT INTO movies (movie_id, name_russian, name_native, year_of_release, description, rating, price, picture_path) VALUES (6, 'Бойцовский клуб', 'Fight Club', '1999', 'Терзаемый хронической бессонницей и отчаянно пытающийся вырваться из мучительно скучной жизни, клерк встречает некоего Тайлера Дардена, харизматического торговца мылом с извращенной философией. Тайлер уверен, что самосовершенствование — удел слабых, а саморазрушение — единственное, ради чего стоит жить.', 8.4, 119.99, 'https://images-na.ssl-images-amazon.com/images/M/MV5BZGY5Y2RjMmItNDg5Yy00NjUwLThjMTEtNDc2OGUzNTBiYmM1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1._SY209_CR0,0,140,209_.jpg');
+
+INSERT INTO genres (genre_id, genre_name) VALUES (1, 'драма');
+INSERT INTO genres (genre_id, genre_name) VALUES (2, 'криминал');
+INSERT INTO genres (genre_id, genre_name) VALUES (3, 'фэнтези');
+INSERT INTO genres (genre_id, genre_name) VALUES (4, 'детектив');
+INSERT INTO genres (genre_id, genre_name) VALUES (5, 'мелодрама');
+INSERT INTO genres (genre_id, genre_name) VALUES (6, 'биография');
+INSERT INTO genres (genre_id, genre_name) VALUES (7, 'комедия');
+INSERT INTO genres (genre_id, genre_name) VALUES (8, 'фантастика');
+INSERT INTO genres (genre_id, genre_name) VALUES (9, 'боевик');
+INSERT INTO genres (genre_id, genre_name) VALUES (10, 'триллер');
+INSERT INTO genres (genre_id, genre_name) VALUES (11, 'приключения');
+INSERT INTO genres (genre_id, genre_name) VALUES (12, 'аниме');
+INSERT INTO genres (genre_id, genre_name) VALUES (13, 'мультфильм');
+INSERT INTO genres (genre_id, genre_name) VALUES (14, 'семейный');
+INSERT INTO genres (genre_id, genre_name) vALUES (15, 'вестерн');
+
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (1, 1);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (1, 6);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (2, 1);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (3, 5);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (3, 1);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (4, 3);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (4, 13);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (4, 11);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (4, 7);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (4, 14);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (5, 4);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (5, 2);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (5, 1);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (5, 10);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (6, 2);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (6, 10);
+INSERT INTO movies_genres (movie_id, genre_id) VALUES (6, 1);
+
+INSERT INTO countries (country_id, country_name) VALUES (1, 'США');
+INSERT INTO countries (country_id, country_name) VALUES (2, 'Франция');
+INSERT INTO countries (country_id, country_name) VALUES (3, 'Великобритания');
+INSERT INTO countries (country_id, country_name) VALUES (4, 'Италия');
+INSERT INTO countries (country_id, country_name) VALUES (5, 'Германия');
+INSERT INTO countries (country_id, country_name) VALUES (6, 'Япония');
+INSERT INTO countries (country_id, country_name) VALUES (7, 'Испания');
+
+INSERT INTO movies_countries (movie_id, country_id) VALUES (1, 1);
+INSERT INTO movies_countries (movie_id, country_id) VALUES (2, 1);
+INSERT INTO movies_countries (movie_id, country_id) VALUES (3, 1);
+INSERT INTO movies_countries (movie_id, country_id) VALUES (4, 1);
+INSERT INTO movies_countries (movie_id, country_id) VALUES (5, 1);
+INSERT INTO movies_countries (movie_id, country_id) VALUES (6, 5);
+INSERT INTO movies_countries (movie_id, country_id) VALUES (6, 1);
+
+INSERT INTO users (user_id, user_name, email, password) VALUES (1, 'Рональд Рейнольдс', 'ronald.reynolds66@example.com', 'paco');
+INSERT INTO users (user_id, user_name, email, password) VALUES (2, 'Дарлин Эдвардс', 'darlene.edwards15@example.com', 'bricks');
+INSERT INTO users (user_id, user_name, email, password) VALUES (3, 'Габриэль Джексон', 'gabriel.jackson91@example.com', 'hjkl');
+INSERT INTO users (user_id, user_name, email, password) VALUES (4, 'Дэрил Брайант', 'daryl.bryant94@example.com', 'exodus');
+INSERT INTO users (user_id, user_name, email, password) VALUES (5, 'Нил Паркер', 'neil.parker43@example.com', '878787');
+INSERT INTO users (user_id, user_name, email, password) VALUES (6, 'Трэвис Райт', 'travis.wright36@example.com', 'smart');
+INSERT INTO users (user_id, user_name, email, password) VALUES (7, 'Амелия Кэннеди', 'amelia.kennedy58@example.com', 'beaker');
+INSERT INTO users (user_id, user_name, email, password) VALUES (8, 'Айда Дэвис', 'ida.davis80@example.com', 'pepsi1');
+INSERT INTO users (user_id, user_name, email, password) VALUES (9, 'Джесси Паттерсон', 'jessie.patterson68@example.com', 'tommy');
+INSERT INTO users (user_id, user_name, email, password) VALUES (10, 'Деннис Крейг', 'dennis.craig82@example.com', 'coldbeer');

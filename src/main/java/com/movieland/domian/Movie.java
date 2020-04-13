@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
 
+
 @Entity
 @Table(name = "movies")
 public class Movie {
@@ -16,6 +17,8 @@ public class Movie {
     private String nameNative;
     @Column(name = "yearOfRelease")
     private int yearOfRelease;
+    @Column(name = "description", length = 500)
+    private String description;
     @Column(name = "rating")
     private float rating;
     @Column(name = "price")
@@ -105,5 +108,13 @@ public class Movie {
 
     public void setCountries(List<Country> countries) {
         this.countries = countries;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

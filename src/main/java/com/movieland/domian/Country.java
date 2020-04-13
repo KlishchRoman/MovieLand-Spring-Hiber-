@@ -2,6 +2,7 @@ package com.movieland.domian;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "countries")
 public class Country {
