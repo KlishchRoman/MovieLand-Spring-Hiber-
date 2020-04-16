@@ -1,6 +1,7 @@
-package domian;
+package domain;
 
 import java.util.Set;
+
 
 public class User {
 
@@ -11,6 +12,17 @@ public class User {
     private String password;
 
     private Set<Roles> roles;
+
+    public User() {
+    }
+
+    public User(int userId, String userName, String email, String password, Set<Roles> roles) {
+        this.userId = userId;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+    }
 
     public int getUserId() {
         return userId;
@@ -44,6 +56,14 @@ public class User {
         this.password = password;
     }
 
+    public void setRoles(Set<Roles> roles) {
+        this.roles = roles;
+    }
+
+    public Set<Roles> getRoles() {
+        return roles;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -54,4 +74,5 @@ public class User {
                 ", roles=" + roles +
                 '}';
     }
+
 }

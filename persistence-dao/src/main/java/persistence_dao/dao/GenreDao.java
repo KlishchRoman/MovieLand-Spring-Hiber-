@@ -1,0 +1,13 @@
+package persistence_dao.dao;
+
+import domain.Genre;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+
+@Repository
+public interface GenreDao {
+
+    List<Genre> findAllGenres();
+    List<Genre> findGenresByGenreId(int genre_id);
+
+}

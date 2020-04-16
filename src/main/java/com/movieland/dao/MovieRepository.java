@@ -1,7 +1,6 @@
 package com.movieland.dao;
 
-import domian.Genre;
-import domian.Movie;
+import domain.Movie;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

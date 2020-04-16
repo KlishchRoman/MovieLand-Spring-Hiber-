@@ -1,4 +1,4 @@
-package domian;
+package domain;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -18,6 +18,23 @@ public class Movie {
     private List<Genre> genres;
     private List<Country> countries;
     private List<Review> reviews;
+
+    public Movie() {
+    }
+
+    public Movie(int movieId, String nameRussian, String nameNative, int yearOfRelease, String description, float rating, BigDecimal price, String picturePath, List<Genre> genres, List<Country> countries, List<Review> reviews) {
+        this.movieId = movieId;
+        this.nameRussian = nameRussian;
+        this.nameNative = nameNative;
+        this.yearOfRelease = yearOfRelease;
+        this.description = description;
+        this.rating = rating;
+        this.price = price;
+        this.picturePath = picturePath;
+        this.genres = genres;
+        this.countries = countries;
+        this.reviews = reviews;
+    }
 
     public int getMovieId() {
         return movieId;

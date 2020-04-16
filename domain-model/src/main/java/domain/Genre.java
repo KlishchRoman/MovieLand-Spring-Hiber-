@@ -1,11 +1,17 @@
-package domian;
-
+package domain;
 
 public class Genre {
 
     private int genreId;
-
     private String genreName;
+
+    public Genre() {
+    }
+
+    public Genre(int genreId, String genreName) {
+        this.genreId = genreId;
+        this.genreName = genreName;
+    }
 
     public int getGenreId() {
         return genreId;

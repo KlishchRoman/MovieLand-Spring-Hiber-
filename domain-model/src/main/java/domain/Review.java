@@ -1,4 +1,4 @@
-package domian;
+package domain;
 
 public class Review {
 
@@ -7,6 +7,16 @@ public class Review {
 
     private Movie movie_id;
     private User user_id;
+
+    public Review() {
+    }
+
+    public Review(int reviewId, String reviewMovie, Movie movie_id, User user_id) {
+        this.reviewId = reviewId;
+        this.reviewMovie = reviewMovie;
+        this.movie_id = movie_id;
+        this.user_id = user_id;
+    }
 
     public int getReviewId() {
         return reviewId;
@@ -22,6 +32,22 @@ public class Review {
 
     public void setReviewMovie(String reviewMovie) {
         this.reviewMovie = reviewMovie;
+    }
+
+    public Movie getMovie_id() {
+        return movie_id;
+    }
+
+    public void setMovie_id(Movie movie_id) {
+        this.movie_id = movie_id;
+    }
+
+    public User getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(User user_id) {
+        this.user_id = user_id;
     }
 
     @Override
