@@ -2,8 +2,8 @@ package com.movieland.controller;
 
 import com.movieland.dao.GenreRepository;
 import com.movieland.dao.MovieRepository;
-import com.movieland.domian.Genre;
-import com.movieland.domian.Movie;
+import domian.Genre;
+import domian.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

@@ -1,15 +1,9 @@
-package com.movieland.domian;
+package domian;
 
-import javax.persistence.*;
-
-
-@Entity
-@Table(name = "countries")
 public class Country {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int countryId;
-    @Column(name = "country_name",nullable = false, unique = true)
+
     private String countryName;
 
     public int getCountryId() {
@@ -26,5 +20,13 @@ public class Country {
 
     public void setCountryName(String countryName) {
         this.countryName = countryName;
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "countryId=" + countryId +
+                ", countryName='" + countryName + '\'' +
+                '}';
     }
 }

@@ -1,42 +1,23 @@
-package com.movieland.domian;
+package domian;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-
-@Entity
-@Table(name = "movies")
 public class Movie {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "movie_id")
+
     private int movieId;
-    @Column(name = "nameRussian", nullable = false)
+
     private String nameRussian;
-    @Column(name = "nameNative")
     private String nameNative;
-    @Column(name = "yearOfRelease")
     private int yearOfRelease;
-    @Column(name = "description", length = 500)
     private String description;
-    @Column(name = "rating")
     private float rating;
-    @Column(name = "price")
     private BigDecimal price;
-    @Column(name = "picturePath")
     private String picturePath;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "movies_genres",
-            joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private List<Genre> genres;
-
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "movies_countries",
-            joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "country_id"))
     private List<Country> countries;
+    private List<Review> reviews;
 
     public int getMovieId() {
         return movieId;
@@ -116,5 +97,30 @@ public class Movie {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "movieId=" + movieId +
+                ", nameRussian='" + nameRussian + '\'' +
+                ", nameNative='" + nameNative + '\'' +
+                ", yearOfRelease=" + yearOfRelease +
+                ", description='" + description + '\'' +
+                ", rating=" + rating +
+                ", price=" + price +
+                ", picturePath='" + picturePath + '\'' +
+                ", genres=" + genres +
+                ", countries=" + countries +
+                ", reviews=" + reviews +
+                '}';
     }
 }

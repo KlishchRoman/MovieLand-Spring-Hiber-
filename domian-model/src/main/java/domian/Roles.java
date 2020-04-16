@@ -1,4 +1,4 @@
-package com.movieland.domian;
+package domian;
 
 public enum Roles {
     ADMIN, USER;
@@ -6,4 +6,6 @@ public enum Roles {
     public String getRole() {
         return name();
     }
+
+
 }

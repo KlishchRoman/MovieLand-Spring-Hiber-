@@ -1,6 +1,6 @@
 package com.movieland.dao;
 
-import com.movieland.domian.User;
+import domian.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

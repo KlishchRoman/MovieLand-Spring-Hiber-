@@ -1,15 +1,10 @@
-package com.movieland.domian;
+package domian;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "genres")
 public class Genre {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private int genreId;
 
-    @Column(name = "genre_name",nullable = false, unique = true)
     private String genreName;
 
     public int getGenreId() {
@@ -26,5 +21,13 @@ public class Genre {
 
     public void setGenreName(String genreName) {
         this.genreName = genreName;
+    }
+
+    @Override
+    public String toString() {
+        return "Genre{" +
+                "genreId=" + genreId +
+                ", genreName='" + genreName + '\'' +
+                '}';
     }
 }

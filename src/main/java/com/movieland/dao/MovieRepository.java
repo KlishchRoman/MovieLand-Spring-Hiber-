@@ -1,7 +1,7 @@
 package com.movieland.dao;
 
-import com.movieland.domian.Genre;
-import com.movieland.domian.Movie;
+import domian.Genre;
+import domian.Movie;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -9,7 +9,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Set;
 
 @Repository
 public interface MovieRepository extends CrudRepository<Movie, Long> {
