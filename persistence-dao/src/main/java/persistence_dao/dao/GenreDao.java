@@ -10,7 +10,7 @@ public interface GenreDao {
 
     List<Genre> findAllGenres();
 
-    List<Genre> findGenresByGenreId(int genre_id);
+    Genre findGenreByGenreId(int genre_id);
 
     void save(Genre genre);
 

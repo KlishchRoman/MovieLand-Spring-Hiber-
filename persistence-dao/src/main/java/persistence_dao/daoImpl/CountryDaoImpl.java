@@ -15,15 +15,15 @@ import java.util.List;
 
 @Repository
 public class CountryDaoImpl implements CountryDao {
+    private static final CountryMapper countryMapper = new CountryMapper();
 
     private JdbcTemplate jdbcTemplate;
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    private static final CountryMapper countryMapper = new CountryMapper();
 
     @Value("${queryFindAllCountries}")
     private String queryFindAllCountries;
 
-    @Value("${findCountryByCountryId}")
+    @Value("${queryFindCountryByCountryId}")
     private String findCountryByCountryId;
 
 

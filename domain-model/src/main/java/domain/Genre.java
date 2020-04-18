@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 public class Genre {
 
     private int genreId;
@@ -35,5 +37,18 @@ public class Genre {
                 "genreId=" + genreId +
                 ", genreName='" + genreName + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Genre)) return false;
+        Genre genre = (Genre) o;
+        return genreName.equals(genre.genreName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(genreName);
     }
 }
