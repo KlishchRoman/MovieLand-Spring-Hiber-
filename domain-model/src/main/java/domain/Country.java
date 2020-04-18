@@ -1,6 +1,8 @@
 package domain;
 
 
+import java.util.Objects;
+
 public class Country {
 
     private int countryId;
@@ -36,5 +38,18 @@ public class Country {
                 "countryId=" + countryId +
                 ", countryName='" + countryName + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Country)) return false;
+        Country country = (Country) o;
+        return countryName.equals(country.countryName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(countryName);
     }
 }
