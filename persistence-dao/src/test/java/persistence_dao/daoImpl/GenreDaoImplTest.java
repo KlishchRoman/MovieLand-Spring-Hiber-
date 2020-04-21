@@ -1,6 +1,5 @@
 package persistence_dao.daoImpl;
 
-import domain.Country;
 import domain.Genre;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -30,7 +29,7 @@ class GenreDaoImplTest {
     void findGenreByGenreId() {
         Genre genre = new Genre(1, "драма");
         Genre genreFromDb = genreDao.findGenreByGenreId(1);
-        assertTrue(genre.equals(genreFromDb));
+        assertEquals(genre, genreFromDb);
     }
 
     @Test

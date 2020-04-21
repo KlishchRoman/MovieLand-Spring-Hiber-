@@ -1,7 +1,6 @@
 package persistence_dao.config;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -17,7 +16,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 @ComponentScan(basePackages = {"persistence_dao.config","persistence_dao.daoImpl"})
 @PropertySource({"classpath:dbConfig.properties",
-        "classpath:sqlQuery.template.properties"})
+        "classpath:sqlQuery.properties"})
 public class ConfigDBConnection {
 
     @Value("${jdbc.driverClassName}")

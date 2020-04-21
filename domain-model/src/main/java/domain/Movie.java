@@ -2,6 +2,7 @@ package domain;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 
 public class Movie {
 
@@ -139,5 +140,25 @@ public class Movie {
                 ", countries=" + countries +
                 ", reviews=" + reviews +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Movie)) return false;
+        Movie movie = (Movie) o;
+        return movieId == movie.movieId &&
+                yearOfRelease == movie.yearOfRelease &&
+                Float.compare(movie.rating, rating) == 0 &&
+                Objects.equals(nameRussian, movie.nameRussian) &&
+                Objects.equals(nameNative, movie.nameNative) &&
+                Objects.equals(description, movie.description) &&
+                Objects.equals(price, movie.price) &&
+                Objects.equals(picturePath, movie.picturePath);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(movieId, nameRussian, nameNative, yearOfRelease, description, rating, price, picturePath);
     }
 }
