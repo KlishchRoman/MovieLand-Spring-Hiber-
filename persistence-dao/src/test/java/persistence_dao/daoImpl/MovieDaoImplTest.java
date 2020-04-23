@@ -35,7 +35,7 @@ class MovieDaoImplTest {
         assertFalse(movies.isEmpty());
         assertEquals(movies.size(), 3);
     }
-
+//Todo: обратить внимание на тест (как заменить new Genre() в параметрах)
     @Test
     void findMoviesByGenre() {
         List<Movie> movies = movieDao.findMoviesByGenre(new Genre(1,"драма"));

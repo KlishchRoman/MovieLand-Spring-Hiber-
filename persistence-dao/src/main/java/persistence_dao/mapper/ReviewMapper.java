@@ -9,6 +9,9 @@ import java.sql.SQLException;
 public class ReviewMapper implements RowMapper<Review> {
     @Override
     public Review mapRow(ResultSet rs, int rowNum) throws SQLException {
-        return null;
+        Review review = new Review();
+        review.setReviewId(rs.getInt("review_id"));
+        review.setReviewMovie(rs.getString("review_movie"));
+        return review;
     }
 }

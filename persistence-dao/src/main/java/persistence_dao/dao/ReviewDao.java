@@ -9,6 +9,13 @@ import java.util.List;
 @Repository
 public interface ReviewDao {
     List<Review> findAllReviewsByMovie(Movie movie);
-    List<Review> findReviewByReviewId(int review_id);
+
+    Review findReviewByReviewId(int review_id);
+
+    void save(Review review);
+
+    void update(Review review);
+
+    void delete(Review review);
 
 }

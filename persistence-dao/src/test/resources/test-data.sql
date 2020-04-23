@@ -65,3 +65,7 @@ INSERT INTO users (user_id, user_name, email, password) VALUES (7, 'Амелия
 INSERT INTO users (user_id, user_name, email, password) VALUES (8, 'Айда Дэвис', 'ida.davis80@example.com', 'pepsi1');
 INSERT INTO users (user_id, user_name, email, password) VALUES (9, 'Джесси Паттерсон', 'jessie.patterson68@example.com', 'tommy');
 INSERT INTO users (user_id, user_name, email, password) VALUES (10, 'Деннис Крейг', 'dennis.craig82@example.com', 'coldbeer');
+
+INSERT INTO reviews (review_id, review_movie, movie_id, user_id) VALUES (1, 'good film', 1,1);
+INSERT INTO reviews (review_id, review_movie, movie_id, user_id) VALUES (2, 'bad film', 1,2);
+INSERT INTO reviews (review_id, review_movie, movie_id, user_id) VALUES (3, 'boring film', 2,1);

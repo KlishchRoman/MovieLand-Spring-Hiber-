@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 public class Review {
 
     private int reviewId;
@@ -58,5 +60,21 @@ public class Review {
                 ", movie_id=" + movie_id +
                 ", user_id=" + user_id +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Review)) return false;
+        Review review = (Review) o;
+        return reviewId == review.reviewId &&
+                Objects.equals(reviewMovie, review.reviewMovie) &&
+                Objects.equals(movie_id, review.movie_id) &&
+                Objects.equals(user_id, review.user_id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(reviewId, reviewMovie, movie_id, user_id);
     }
 }
