@@ -1,4 +1,4 @@
-package persistence_dao.config;
+package persistence.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"persistence_dao.config","persistence_dao.daoImpl"})
+@ComponentScan(basePackages = {"persistence.config", "persistence.impl"})
 @PropertySource({"classpath:dbConfig.properties",
         "classpath:sqlQuery.properties"})
 public class ConfigDBConnection {

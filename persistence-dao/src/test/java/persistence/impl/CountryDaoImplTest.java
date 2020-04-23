@@ -1,4 +1,4 @@
-package persistence_dao.daoImpl;
+package persistence.impl;
 
 import domain.Country;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import persistence_dao.ApplicationTest;
+import persistence.ApplicationTest;
 
 import java.util.List;
 

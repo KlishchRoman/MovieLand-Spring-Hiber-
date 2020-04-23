@@ -1,4 +1,4 @@
-package persistence_dao.daoImpl;
+package persistence.impl;
 
 import domain.Genre;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import persistence_dao.ApplicationTest;
+import persistence.ApplicationTest;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package persistence_dao.dao;
+package persistence.dao;
 
 import domain.Movie;
 import domain.Review;

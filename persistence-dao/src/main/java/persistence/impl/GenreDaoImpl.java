@@ -1,4 +1,4 @@
-package persistence_dao.daoImpl;
+package persistence.impl;
 
 import domain.Genre;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
-import persistence_dao.dao.GenreDao;
-import persistence_dao.mapper.GenreMapper;
+import persistence.dao.GenreDao;
+import persistence.mapper.GenreMapper;
 
 import java.util.List;
 

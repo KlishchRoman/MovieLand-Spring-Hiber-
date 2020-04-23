@@ -5,19 +5,19 @@ import java.util.Objects;
 public class Review {
 
     private int reviewId;
-    private String reviewMovie;
+    private String movieReview;
 
-    private Movie movie_id;
-    private User user_id;
+    private Movie movieId;
+    private User userId;
 
     public Review() {
     }
 
-    public Review(int reviewId, String reviewMovie, Movie movie_id, User user_id) {
+    public Review(int reviewId, String movieReview, Movie movieId, User userId) {
         this.reviewId = reviewId;
-        this.reviewMovie = reviewMovie;
-        this.movie_id = movie_id;
-        this.user_id = user_id;
+        this.movieReview = movieReview;
+        this.movieId = movieId;
+        this.userId = userId;
     }
 
     public int getReviewId() {
@@ -28,37 +28,37 @@ public class Review {
         this.reviewId = reviewId;
     }
 
-    public String getReviewMovie() {
-        return reviewMovie;
+    public String getMovieReview() {
+        return movieReview;
     }
 
-    public void setReviewMovie(String reviewMovie) {
-        this.reviewMovie = reviewMovie;
+    public void setMovieReview(String movieReview) {
+        this.movieReview = movieReview;
     }
 
-    public Movie getMovie_id() {
-        return movie_id;
+    public Movie getMovieId() {
+        return movieId;
     }
 
-    public void setMovie_id(Movie movie_id) {
-        this.movie_id = movie_id;
+    public void setMovieId(Movie movieId) {
+        this.movieId = movieId;
     }
 
-    public User getUser_id() {
-        return user_id;
+    public User getUserId() {
+        return userId;
     }
 
-    public void setUser_id(User user_id) {
-        this.user_id = user_id;
+    public void setUserId(User userId) {
+        this.userId = userId;
     }
 
     @Override
     public String toString() {
         return "Review{" +
                 "reviewId=" + reviewId +
-                ", reviewMovie='" + reviewMovie + '\'' +
-                ", movie_id=" + movie_id +
-                ", user_id=" + user_id +
+                ", reviewMovie='" + movieReview + '\'' +
+                ", movie_id=" + movieId +
+                ", user_id=" + userId +
                 '}';
     }
 
@@ -68,13 +68,13 @@ public class Review {
         if (!(o instanceof Review)) return false;
         Review review = (Review) o;
         return reviewId == review.reviewId &&
-                Objects.equals(reviewMovie, review.reviewMovie) &&
-                Objects.equals(movie_id, review.movie_id) &&
-                Objects.equals(user_id, review.user_id);
+                Objects.equals(movieReview, review.movieReview) &&
+                Objects.equals(movieId, review.movieId) &&
+                Objects.equals(userId, review.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(reviewId, reviewMovie, movie_id, user_id);
+        return Objects.hash(reviewId, movieReview, movieId, userId);
     }
 }

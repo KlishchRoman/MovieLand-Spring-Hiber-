@@ -1,4 +1,4 @@
-package persistence_dao.mapper;
+package persistence.mapper;
 
 import domain.Review;
 import org.springframework.jdbc.core.RowMapper;
@@ -11,7 +11,7 @@ public class ReviewMapper implements RowMapper<Review> {
     public Review mapRow(ResultSet rs, int rowNum) throws SQLException {
         Review review = new Review();
         review.setReviewId(rs.getInt("review_id"));
-        review.setReviewMovie(rs.getString("review_movie"));
+        review.setMovieReview(rs.getString("movie_review"));
         return review;
     }
 }

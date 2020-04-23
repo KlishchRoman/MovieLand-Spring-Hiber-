@@ -1,4 +1,4 @@
-package persistence_dao.daoImpl;
+package persistence.impl;
 
 import domain.Movie;
 import domain.Review;
@@ -8,8 +8,8 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
-import persistence_dao.dao.ReviewDao;
-import persistence_dao.mapper.ReviewMapper;
+import persistence.dao.ReviewDao;
+import persistence.mapper.ReviewMapper;
 
 import java.util.List;
 
@@ -40,17 +40,17 @@ public class ReviewDaoImpl implements ReviewDao {
 
     @Override
     public void save(Review review) {
-
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void update(Review review) {
-
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void delete(Review review) {
-
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Autowired

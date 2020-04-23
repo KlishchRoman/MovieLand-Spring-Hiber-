@@ -1,4 +1,4 @@
-package persistence_dao.daoImpl;
+package persistence.impl;
 
 import domain.Genre;
 import domain.Movie;
@@ -9,8 +9,8 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
-import persistence_dao.dao.MovieDao;
-import persistence_dao.mapper.MovieMapper;
+import persistence.dao.MovieDao;
+import persistence.mapper.MovieMapper;
 
 import java.sql.ResultSet;
 import java.util.List;

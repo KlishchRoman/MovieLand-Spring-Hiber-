@@ -1,4 +1,4 @@
-package persistence_dao.mapper;
+package persistence.mapper;
 
 import domain.Genre;
 import org.springframework.jdbc.core.RowMapper;

@@ -1,7 +1,6 @@
-package persistence_dao.dao;
+package persistence.dao;
 
 import domain.Country;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package persistence_dao.dao;
+package persistence.dao;
 
 import domain.User;
 import org.springframework.stereotype.Repository;

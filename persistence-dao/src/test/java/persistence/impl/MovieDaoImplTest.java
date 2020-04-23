@@ -1,4 +1,4 @@
-package persistence_dao.daoImpl;
+package persistence.impl;
 
 import domain.Genre;
 import domain.Movie;
@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import persistence_dao.ApplicationTest;
-import persistence_dao.dao.MovieDao;
+import persistence.ApplicationTest;
+import persistence.dao.MovieDao;
 
 import java.math.BigDecimal;
 import java.util.List;
