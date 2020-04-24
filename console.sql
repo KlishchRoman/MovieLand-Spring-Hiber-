@@ -65,3 +65,13 @@ INSERT INTO users (user_id, user_name, email, password) VALUES (7, 'Амелия
 INSERT INTO users (user_id, user_name, email, password) VALUES (8, 'Айда Дэвис', 'ida.davis80@example.com', 'pepsi1');
 INSERT INTO users (user_id, user_name, email, password) VALUES (9, 'Джесси Паттерсон', 'jessie.patterson68@example.com', 'tommy');
 INSERT INTO users (user_id, user_name, email, password) VALUES (10, 'Деннис Крейг', 'dennis.craig82@example.com', 'coldbeer');
+
+INSERT INTO roles (user_id, roles ) VALUES (1, 'ADMIN');
+INSERT INTO roles (user_id, roles ) VALUES (2, 'ADMIN');
+INSERT INTO roles (user_id, roles ) VALUES (3, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (4, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (6, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (7, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (8, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (9, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (10, 'USER');

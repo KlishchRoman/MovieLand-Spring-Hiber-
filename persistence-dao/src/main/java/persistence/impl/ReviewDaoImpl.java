@@ -15,7 +15,8 @@ import java.util.List;
 
 @Repository
 public class ReviewDaoImpl implements ReviewDao {
-    private final ReviewMapper reviewMapper = new ReviewMapper();
+    private final static ReviewMapper reviewMapper = new ReviewMapper();
+
     private NamedParameterJdbcTemplate parameterJdbcTemplate;
 
     @Value("${findAllReviewsByMovie}")

@@ -69,3 +69,13 @@ INSERT INTO users (user_id, user_name, email, password) VALUES (10, 'Денни�
 INSERT INTO reviews (review_id, movie_review, movie_id, user_id) VALUES (1, 'good film', 1,1);
 INSERT INTO reviews (review_id, movie_review, movie_id, user_id) VALUES (2, 'bad film', 1,2);
 INSERT INTO reviews (review_id, movie_review, movie_id, user_id) VALUES (3, 'boring film', 2,1);
+
+INSERT INTO roles (user_id, roles ) VALUES (1, 'ADMIN');
+INSERT INTO roles (user_id, roles ) VALUES (2, 'ADMIN');
+INSERT INTO roles (user_id, roles ) VALUES (3, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (4, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (6, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (7, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (8, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (9, 'USER');
+INSERT INTO roles (user_id, roles ) VALUES (10, 'USER');

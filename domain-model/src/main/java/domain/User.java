@@ -1,7 +1,7 @@
 package domain;
 
-import java.util.Set;
 
+import java.util.Objects;
 
 public class User {
 
@@ -10,18 +10,17 @@ public class User {
     private String userName;
     private String email;
     private String password;
-
-    private Set<Roles> roles;
+    private Roles role;
 
     public User() {
     }
 
-    public User(int userId, String userName, String email, String password, Set<Roles> roles) {
+    public User(int userId, String userName, String email, String password, Roles role) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.roles = roles;
+        this.role = role;
     }
 
     public int getUserId() {
@@ -56,12 +55,12 @@ public class User {
         this.password = password;
     }
 
-    public void setRoles(Set<Roles> roles) {
-        this.roles = roles;
+    public void setRole(Roles role) {
+        this.role = role;
     }
 
-    public Set<Roles> getRoles() {
-        return roles;
+    public Roles getRole() {
+        return role;
     }
 
     @Override
@@ -71,8 +70,23 @@ public class User {
                 ", userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", roles=" + roles +
+                ", roles=" + role +
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return userId == user.userId &&
+                Objects.equals(userName, user.userName) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(password, user.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, userName, email, password);
+    }
 }

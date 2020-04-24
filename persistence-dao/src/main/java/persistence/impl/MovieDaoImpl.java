@@ -17,8 +17,8 @@ import java.util.List;
 
 @Repository
 public class MovieDaoImpl implements MovieDao {
-
     private static final MovieMapper mapper = new MovieMapper();
+
     private JdbcTemplate jdbcTemplate;
     private NamedParameterJdbcTemplate parameterJdbcTemplate;
 

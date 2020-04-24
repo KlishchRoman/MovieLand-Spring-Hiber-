@@ -42,14 +42,14 @@ class GenreDaoImplTest {
     @Test
     void update() {
         assertThrows(UnsupportedOperationException.class,
-                () -> genreDao.save(new Genre()),
+                () -> genreDao.update(new Genre()),
                 "Update not supported yet.");
     }
 
     @Test
     void delete() {
         assertThrows(UnsupportedOperationException.class,
-                () -> genreDao.save(new Genre()),
+                () -> genreDao.delete(new Genre()),
                 "Delete not supported yet.");
     }
 }

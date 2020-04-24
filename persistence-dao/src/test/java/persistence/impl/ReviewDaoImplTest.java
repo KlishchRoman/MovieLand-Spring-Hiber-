@@ -5,7 +5,6 @@ import domain.Review;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.function.Executable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -15,7 +14,8 @@ import persistence.dao.ReviewDao;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = ApplicationTest.class)
@@ -27,7 +27,7 @@ class ReviewDaoImplTest {
 
 
     @BeforeEach
-    public void createListReviews(){
+    public void createListReviews() {
 
         Review reviewOne = new Review();
         Review reviewTwo = new Review();
@@ -54,8 +54,8 @@ class ReviewDaoImplTest {
     @Test
     void findReviewByReviewId() {
         Review reviewFromBD = reviewDao.findReviewByReviewId(1);
-        assertEquals(expectedReviews.get(0).getMovieId(),reviewFromBD.getMovieId());
-        assertEquals(expectedReviews.get(0).getMovieReview(),reviewFromBD.getMovieReview());
+        assertEquals(expectedReviews.get(0).getMovieId(), reviewFromBD.getMovieId());
+        assertEquals(expectedReviews.get(0).getMovieReview(), reviewFromBD.getMovieReview());
 
     }
 
@@ -69,14 +69,14 @@ class ReviewDaoImplTest {
     @Test
     void update() {
         assertThrows(UnsupportedOperationException.class,
-                () -> reviewDao.save(new Review()),
+                () -> reviewDao.update(new Review()),
                 "Update not supported yet.");
     }
 
     @Test
     void delete() {
         assertThrows(UnsupportedOperationException.class,
-                () -> reviewDao.save(new Review()),
+                () -> reviewDao.delete(new Review()),
                 "Delete not supported yet.");
     }
 }

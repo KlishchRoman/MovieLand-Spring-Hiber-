@@ -69,14 +69,14 @@ class MovieDaoImplTest {
     @Test
     void update() {
         assertThrows(UnsupportedOperationException.class,
-                () -> movieDao.save(new Movie()),
+                () -> movieDao.update(new Movie()),
                 "Update not supported yet.");
     }
 
     @Test
     void delete() {
         assertThrows(UnsupportedOperationException.class,
-                () -> movieDao.save(new Movie()),
+                () -> movieDao.delete(new Movie()),
                 "Delete not supported yet.");
     }
 }
