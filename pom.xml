@@ -5,6 +5,7 @@
     <modules>
         <module>domain-model</module>
         <module>persistence-dao</module>
+        <module>controller</module>
     </modules>
 
     <parent>

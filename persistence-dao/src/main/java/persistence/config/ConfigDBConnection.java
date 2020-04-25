@@ -14,7 +14,8 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"persistence.config", "persistence.impl"})
+//TODO: basePackages = {"persistence", "persistence.impl"} ссылаеться на тестовую папку
+@ComponentScan(basePackages = {"persistence", "persistence.impl"})
 @PropertySource({"classpath:dbConfig.properties",
         "classpath:sqlQuery.properties"})
 public class ConfigDBConnection {
