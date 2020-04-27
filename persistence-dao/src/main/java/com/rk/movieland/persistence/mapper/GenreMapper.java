@@ -1,0 +1,18 @@
+package com.rk.movieland.persistence.mapper;
+
+import com.rk.movieland.domain.Genre;
+import org.springframework.jdbc.core.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class GenreMapper implements RowMapper<Genre> {
+
+    @Override
+    public Genre mapRow(ResultSet rs, int rowNum) throws SQLException {
+        Genre genre = new Genre();
+        genre.setGenreId(rs.getInt("genre_id"));
+        genre.setGenreName(rs.getString("genre_name"));
+        return genre;
+    }
+}

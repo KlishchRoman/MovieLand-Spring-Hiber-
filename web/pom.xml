@@ -4,22 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>movieland</artifactId>
-        <groupId>com.movieland</groupId>
+        <groupId>com.rk.movieland</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>controller</artifactId>
+    <artifactId>web</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.movieland</groupId>
+            <groupId>com.rk.movieland</groupId>
             <artifactId>domain-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.movieland</groupId>
+            <groupId>com.rk.movieland</groupId>
             <artifactId>persistence-dao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
