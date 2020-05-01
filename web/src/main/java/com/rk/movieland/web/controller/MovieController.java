@@ -1,12 +1,12 @@
-package web.controller;
+package com.rk.movieland.web.controller;
 
 import com.rk.movieland.domain.Movie;
+import com.rk.movieland.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.rk.movieland.persistence.dao.MovieDao;
 
 import java.util.List;
 
@@ -15,11 +15,11 @@ import java.util.List;
 public class MovieController {
 
     @Autowired
-    MovieDao movieDao;
+    MovieService movieService;
 
     @GetMapping
     public List<Movie> getAllMovie() {
-        List<Movie> movies = movieDao.findAllMovies();
+        List<Movie> movies = movieService.getAllMovies();
         return movies;
     }
 

@@ -25,6 +25,7 @@ class UserDaoImplTest {
 
     @BeforeEach
     public void createUser(){
+        expectedUser = new User();
         expectedUser.setUserId(1);
         expectedUser.setUserName("Рональд Рейнольдс");
         expectedUser.setEmail("ronald.reynolds66@example.com");
@@ -56,7 +57,7 @@ class UserDaoImplTest {
 
     @Test
     void shouldReturnNull_IncorrectUserId() {
-        User userFromDB = userDao.findUserByUserId(1);
+        User userFromDB = userDao.findUserByUserId(100);
         assertNull(userFromDB);
     }
 

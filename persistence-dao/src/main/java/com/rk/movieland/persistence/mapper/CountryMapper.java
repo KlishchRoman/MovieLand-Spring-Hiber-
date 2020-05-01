@@ -10,12 +10,7 @@ public class CountryMapper implements RowMapper<Country> {
 
     @Override
     public Country mapRow(ResultSet resultSet, int i) throws SQLException {
-
-        if (resultSet.next()) {
-            Country country = new Country(resultSet.getInt("country_id"), resultSet.getString("country_name"));
-            return country;
-        } else {
-            return null;
-        }
+        Country country = new Country(resultSet.getInt("country_id"), resultSet.getString("country_name"));
+        return country;
     }
 }

@@ -9,8 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.rk.movieland</groupId>
     <artifactId>service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.rk.movieland</groupId>
+            <artifactId>domain-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rk.movieland</groupId>
+            <artifactId>persistence-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

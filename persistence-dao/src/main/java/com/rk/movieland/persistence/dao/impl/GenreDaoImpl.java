@@ -34,10 +34,10 @@ public class GenreDaoImpl implements GenreDao {
 
     @Override
     public Genre findGenreByGenreId(int genre_id) {
-        try{
+        try {
             SqlParameterSource source = new MapSqlParameterSource("genre_id", genre_id);
             return parameterJdbcTemplate.queryForObject(queryFindGenreByGenreId, source, genremaper);
-        }catch (EmptyResultDataAccessException e) {
+        } catch (EmptyResultDataAccessException e) {
             return null;
         }
     }

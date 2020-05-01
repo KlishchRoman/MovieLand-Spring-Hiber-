@@ -64,7 +64,7 @@ class MovieDaoImplTest {
 
     @Test
     void shouldReturnNull_IncorrectMovieId() {
-        Movie movieFromBD = movieDao.findMovieByMovieId(1);
+        Movie movieFromBD = movieDao.findMovieByMovieId(25);
         assertNull(movieFromBD);
     }
 

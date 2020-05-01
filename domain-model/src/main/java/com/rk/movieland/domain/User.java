@@ -81,12 +81,12 @@ public class User {
         return userId == user.userId &&
                 Objects.equals(userName, user.userName) &&
                 Objects.equals(email, user.email) &&
-                Objects.equals(password, user.password) &&
-                role == user.role;
+                Objects.equals(password, user.password);
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, userName, email, password, role);
+        return Objects.hash(userId, userName, email, password);
     }
 }
