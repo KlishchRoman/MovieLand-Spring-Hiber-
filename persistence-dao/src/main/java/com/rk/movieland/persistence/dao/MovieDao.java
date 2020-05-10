@@ -13,7 +13,7 @@ public interface MovieDao {
 
     List<Movie> find3RandomMovies();
 
-    List<Movie> findMoviesByGenre(Genre genre);
+    List<Movie> findMoviesByGenre(int genreId);
 
     Movie findMovieByMovieId(int movie_id);
 

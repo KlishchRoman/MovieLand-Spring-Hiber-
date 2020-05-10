@@ -36,13 +36,13 @@ class MovieDaoImplTest {
 
     @Test
     void shouldReturnListMovies_Genre() {
-        List<Movie> movies = movieDao.findMoviesByGenre(new Genre(1, "драма"));
+        List<Movie> movies = movieDao.findMoviesByGenre(1);
         assertEquals(movies.size(), 5);
     }
 
     @Test
     void shouldReturnEmptyList_IncorrectGenre() {
-        List<Movie> movies = movieDao.findMoviesByGenre(new Genre(30, "без жанра"));
+        List<Movie> movies = movieDao.findMoviesByGenre(30);
         assertTrue(movies.isEmpty());
     }
 

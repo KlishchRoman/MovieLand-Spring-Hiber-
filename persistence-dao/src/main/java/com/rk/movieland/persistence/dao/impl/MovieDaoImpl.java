@@ -47,8 +47,8 @@ public class MovieDaoImpl implements MovieDao {
     }
 
     @Override
-    public List<Movie> findMoviesByGenre(Genre genre) {
-        SqlParameterSource source = new MapSqlParameterSource("genre_id", genre.getGenreId());
+    public List<Movie> findMoviesByGenre(int genre_id) {
+        SqlParameterSource source = new MapSqlParameterSource("genre_id", genre_id);
         return parameterJdbcTemplate.query(findMoviesByGenre, source, mapper);
     }
 
