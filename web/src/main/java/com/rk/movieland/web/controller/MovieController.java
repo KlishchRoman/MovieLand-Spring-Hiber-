@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping(value = "/v1/movie", produces = MediaType.APPLICATION_JSON_VALUE)
 public class MovieController {
 
-    private static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getLogger(MovieController.class);
 
     @Autowired
     MovieService movieService;
@@ -29,7 +29,7 @@ public class MovieController {
     }
 
     @GetMapping(value = "/random")
-    public List<Movie> get3RandomMovie() {
+    public List<Movie> get3RandomMovies() {
         logger.debug("Test MovieController");
         return movieService.get3RanndomMovies();
     }
