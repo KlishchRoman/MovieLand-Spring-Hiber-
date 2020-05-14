@@ -1,7 +1,7 @@
 package com.rk.movieland.service;
 
-import com.rk.movieland.domain.Genre;
 import com.rk.movieland.domain.Movie;
+import com.rk.movieland.service.dto.MovieDto;
 import com.rk.movieland.persistence.dao.MovieDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,9 +12,10 @@ import java.util.List;
 public class MovieService {
 
     private MovieDao movieDao;
+    private MovieDto movieDto;
 
-    public List<Movie> getAllMovies() {
-        return movieDao.findAllMovies();
+    public List<MovieDto> getAllMovies() {
+        return movieDto.listMovieDto(movieDao.findAllMovies());
     }
 
     public List<Movie> get3RanndomMovies() {
@@ -28,5 +29,9 @@ public class MovieService {
     @Autowired
     public void setMovieDao(MovieDao movieDao) {
         this.movieDao = movieDao;
+    }
+    @Autowired
+    public void setMovieDto(MovieDto movieDto) {
+        this.movieDto = movieDto;
     }
 }

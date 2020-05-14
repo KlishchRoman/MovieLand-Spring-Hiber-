@@ -1,6 +1,7 @@
 package com.rk.movieland.web.controller;
 
 import com.rk.movieland.domain.Movie;
+import com.rk.movieland.service.dto.MovieDto;
 import com.rk.movieland.service.MovieService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,7 +24,7 @@ public class MovieController {
     MovieService movieService;
 
     @GetMapping
-    public List<Movie> getAllMovie() {
+    public List<MovieDto> getAllMovie() {
         logger.debug("Test MovieController");
         return movieService.getAllMovies();
     }
